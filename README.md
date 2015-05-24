@@ -13,3 +13,6 @@ at Southampton Solent University's (UHS HPHI Project).
 #Find more info on Ceka at https://ceka.5cf.de/
 Find Ceka's documentation at https://ceka.5cf.de/documentation/html/R_Project_CekaDocumentation.htm
 Alternatively drop an issue here on GitHub or send a mail to ceka@5cf.de
+
+Please make sure that you download & include the MySQL.Data.dll (Download for ".NET and Mono") http://dev.mysql.com/downloads/connector/net/
+If you want to use the MySQL Table -> ARFF file functionalities of Ceka.
