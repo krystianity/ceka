@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DFEE5FF-3739-46DE-8901-6EE05D43EF6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DM</RootNamespace>
+    <AssemblyName>Ceka</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Ceka.XML</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Ceka\Algorithms\Associaters\Apriori.cs" />
+    <Compile Include="Ceka\Algorithms\Associaters\Associater.cs" />
+    <Compile Include="Ceka\Algorithms\Associaters\MultithreadedApriori.cs" />
+    <Compile Include="Ceka\Algorithms\Classifiers\Classifier.cs" />
+    <Compile Include="Ceka\Algorithms\Classifiers\SupportVectorMachine.cs" />
+    <Compile Include="Ceka\Algorithms\Clusterers\Clusterer.cs" />
+    <Compile Include="Ceka\Algorithms\Clusterers\Cobweb.cs" />
+    <Compile Include="Ceka\Algorithms\Clusterers\KMeans.cs" />
+    <Compile Include="Ceka\Algorithms\Miner.cs" />
+    <Compile Include="Ceka\CekaCore\Dataset\ArffInstance.cs" />
+    <Compile Include="Ceka\CekaCore\CekaException.cs" />
+    <Compile Include="Ceka\CekaCore\EArffTypes.cs" />
+    <Compile Include="Ceka\CekaCore\SimpleArffInstance.cs" />
+    <Compile Include="Ceka\CekaCore\Dataset\Story.cs" />
+    <Compile Include="Ceka\CekaCore\Dataset\Library.cs" />
+    <Compile Include="Ceka\Common\LogFile.cs" />
+    <Compile Include="Ceka\Common\MurmurHash2.cs" />
+    <Compile Include="Ceka\Helpers\NamespaceDoc.cs" />
+    <Compile Include="Ceka\Helpers\RangeBuilder.cs" />
+    <Compile Include="Ceka\Loader\AbstractLoader.cs" />
+    <Compile Include="Ceka\CekaCore\ArffFile.cs" />
+    <Compile Include="Ceka\Loader\ArffLoader.cs" />
+    <Compile Include="Ceka\Loader\ILoader.cs" />
+    <Compile Include="Ceka\Helpers\Utils.cs" />
+    <Compile Include="Ceka\Database\CekaMySQL.cs" />
+    <Compile Include="Ceka\Saver\ArffSaver.cs" />
+    <Compile Include="Ceka\Saver\ResultSaver.cs" />
+    <Compile Include="Ceka\Saver\SaveTypes.cs" />
+    <Compile Include="Ceka\Saver\SimpleJsonSaver.cs" />
+    <Compile Include="Ceka\Saver\WekaAssociationRulesSaver.cs" />
+    <Compile Include="Ceka\UHS\HashComparison.cs" />
+    <Compile Include="Ceka\UHS\StaticBuilder.cs" />
+    <Compile Include="Ceka\UHS\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rd\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
